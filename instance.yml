@@ -7,7 +7,7 @@
     ami_id: "ami-051de6a4e7ae45f77"  # Example AMI ID (Ubuntu 20.04 LTS)
     instance_type: "t3.micro"
     key_name: "croma-new"  # Replace with your actual SSH key pair name
-    security_group_name: "my-sg2"
+    security_group_name: "my-sg3"
     subnet_id: "subnet-04f395616e97a48d2"  # Replace with your subnet ID
 
   tasks:
@@ -26,7 +26,7 @@
 
     - name: Create an EC2 instance
       amazon.aws.ec2_instance:
-        name: "Active-Directory"
+        name: "Ram-Web-Server"
         image_id: "{{ ami_id }}"
         instance_type: "{{ instance_type }}"
         key_name: "{{ key_name }}"
